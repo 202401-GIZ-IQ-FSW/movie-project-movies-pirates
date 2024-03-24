@@ -3,9 +3,9 @@ import React from 'react';
 import Footer from '@/components/footer';
 export default function Home() {
   return (
-    <main className='bg-[#020D18]'>
-      <Footer />
-    </main>
-  );
+
+    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+  )
+
 }
  
