@@ -6,10 +6,10 @@ const Footer = () => {
     return (
       <div className="footer flex justify-between">
         <div className="mx-5">
-          <img className='lg:w-[180px] lg:h-[70px] md:w-[150px] md:h-[50px] sm:w-[130px] sm:h-[35px]' src="https://cdn.discordapp.com/attachments/1219662142479794206/1221290796486234152/image.png?ex=66120ab0&is=65ff95b0&hm=cebb8c5f03e3af331c6073401394b8b90078f6e35ede4c30bd1646ae38c68212&" alt="Logo" />
+          <img className='lg:w-[150px] lg:h-[100px] md:w-[120px] md:h-[70px] sm:w-[100px] sm:h-[60px]' src="https://cdn.discordapp.com/attachments/1219662142479794206/1221447209690730698/logo.png?ex=66129c5c&is=6600275c&hm=6a5607d59730e98280cc0f6c435af37e632490048e9f2460d3b7f53511dc80ca&" alt="Logo" />
           <div>
-            <ul className="text-[#9344E3]  lg:text-2xl md:text-xl font-abc relative lg:left-8 lg:top-3  md:top-2 md:left-8 ">
-              <li className='mb-5'>
+            <ul className="text-[#9344E3]  lg:text-2xl md:text-xl font-abc relative lg:left-8 lg:top-3  md:top-2 md:left-8 sm:left-4 ">
+              <li className='mb-4'>
                 <a href="/">HOME</a>
               </li>
               <li className='mb-5'>
@@ -56,7 +56,7 @@ const Footer = () => {
 <div>
 <PersonCard   
   name="Lava Ahmed"
-  imageUrl="https://i.pinimg.com/564x/36/77/44/367744454d53053aa16a90c76d5ffd6f.jpg"
+  imageUrl="https://cdn.discordapp.com/attachments/1219361781407813713/1221446892286640189/meme.jpg?ex=66129c10&is=66002710&hm=17c93b24166aee3d49853a8e8f3cb1eb27278e8d6e68b1c467e7a949afd46657&"
   linkedinUrl="linkedin : https://www.linkedin.com/in/hana-abdulla-70ab181b8/ 
   img : https://media.licdn.com/dms/image/D4E03AQEymTqMvVpM_A/profile-displayphoto-shrink_400_400/0/1704915428727?e=1716422400&v=beta&t=XVG9nEpJJd0eZy_qhdEJXqtp7JK5afygxZVXAwMWJNQ"
   githubUrl="https://github.com/eruptinglava"
