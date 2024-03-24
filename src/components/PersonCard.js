@@ -11,7 +11,7 @@ const PersonCard = ({ name, imageUrl, linkedinUrl, githubUrl }) => {
                 <div className="image-container">
                     <img className="rounded-full lg:h-[96px] lg:w-[96px] md:h-[76px] md:w-[76px] sm:h-[56px] sm:w-[56px] object-cover relative top-8 left-4" src={imageUrl} alt="Person" />
                 </div>
-                <h1 className="text-[#9344E3] lg:text-2xl md:text-xl font-abc relative lg:top-7 lg:right-12 md:top-5 md:right-8 sm:top-6">{name}</h1>
+                <h1 className="text-[#9344E3] lg:text-2xl md:text-xl font-abc relative lg:top-7 lg:right-12 md:top-5 md:right-8 sm:top-">{name}</h1>
             </div>
 
             <div className="icons grid grid-cols-2 gap-0">
