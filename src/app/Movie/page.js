@@ -1,6 +1,5 @@
 import Movies from "@/components/Movies/Movies"
 import Pagination from "@/components/Pagination/Pagination"
-// import Pagination from "@/components/Pagination/Pagination"
 const TOKEN = process.env.API_USER_TOKEN
 
 async function page(param) {
@@ -40,7 +39,7 @@ export default page
 export async function FetchingMovies({ page, sort }) {
   const options = {
     method: "GET",
-    url: `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=${sort}.desc`,
+    url: `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=${sort}`,
     headers: {
       accept: "application/json",
       Authorization: `Bearer ${TOKEN}`,
