@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react"
 
 const Page = ({ params }) => {
+  const newParam=params.movie
+  console.log(newParam)
   const [movieInfo, setMovieInfo] = useState(null)
   const [credits, setCredits] = useState([])
   const [relatedMovies, setRelatedMovies] = useState([])
@@ -13,7 +15,7 @@ const Page = ({ params }) => {
       try {
         // Fetch movie details
         const movieResponse = await fetch(
-          `https://api.themoviedb.org/3/movie/${params.Movie}?language=en-US&api_key=97b9fa008c0d44e6c42538bc72b8628f`,
+          `https://api.themoviedb.org/3/movie/${params.movie}?language=en-US&api_key=97b9fa008c0d44e6c42538bc72b8628f`,
         )
         const movieData = await movieResponse.json()
         setMovieInfo(movieData)

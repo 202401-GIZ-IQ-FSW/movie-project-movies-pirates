@@ -3,7 +3,7 @@ import PersonCard from "../PersonCard"
 
 const Footer = () => {
   return (
-    <div className="footer flex justify-between">
+    <div className="footer flex justify-between BG">
       <div className="mx-5">
         <img
           href="/"

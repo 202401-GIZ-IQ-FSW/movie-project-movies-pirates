@@ -14,6 +14,9 @@ module.exports = {
       },fontFamily:{
         abc:["Jost"]
       },
+      gridTemplateColumns: {
+        '1fr-3fr': '1fr 3fr',
+      },
     },
   },
   plugins: [require("daisyui")],
