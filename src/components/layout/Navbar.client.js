@@ -29,13 +29,15 @@ export default function NavBar() {
             Home
           </a>
           <div className="dropdown dropdown-hover ">
-            <a href={"/movie?name=Top+Rate&category=top_rated.dec"}>Movie</a>
+            <a href={"/movie?page=1&sort_by=popularity.desc"}>Movie</a>
             <ul
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 w-52 bg-slate-800"
             >
               <li>
-                <a href={"/movie?page=1&sort_by=vote_avarage.dec"}>Top rated</a>
+                <a href={"/movie?page=1&sort_by=vote_avarage.desc"}>
+                  Top rated
+                </a>
               </li>
               <li>
                 <a href={"/movie?page=4&sort_by=revenue.desc"}>Top Office</a>
