@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import image from "../../../public/i.png"
 
 // This page, a child of a Server-Side Rendering (SSR) component,
@@ -30,19 +29,21 @@ export default function NavBar() {
             Home
           </a>
           <div className="dropdown dropdown-hover ">
-            <a href={"/Movie?name=Top+Rate&category=top_rated"}>Movie</a>
+            <a href={"/movie?page=1&sort_by=popularity.desc"}>Movie</a>
             <ul
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 w-52 bg-slate-800"
             >
               <li>
-                <a href={"/Movie?page=1&sort_by=vote_avarage.dec"}>Top rated</a>
+                <a href={"/movie?page=1&sort_by=vote_avarage.desc"}>
+                  Top rated
+                </a>
               </li>
               <li>
-                <a href={"/Movie?page=4&sort_by=revenue.desc"}>Top Office</a>
+                <a href={"/movie?page=4&sort_by=revenue.desc"}>Top Office</a>
               </li>
               <li>
-                <a href={"/Movie?page=1&sort_by=primary_release_date.desc"}>
+                <a href={"/movie?page=1&sort_by=primary_release_date.desc"}>
                   Up Comming{" "}
                 </a>
               </li>
@@ -50,7 +51,7 @@ export default function NavBar() {
             <a className="mx-4" href={"#"}>
               Tv Show
             </a>
-            <a className="mx-4" href={"/Actors"}>
+            <a className="mx-4" href={"/actor"}>
               Actors
             </a>
           </div>
