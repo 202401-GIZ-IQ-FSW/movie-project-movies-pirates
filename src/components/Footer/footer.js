@@ -17,10 +17,10 @@ const Footer = () => {
               <a href="/">HOME</a>
             </li>
             <li className="mb-5">
-              <a href="/Movie?page=1&sort_by=popularit.dec">MOVIES</a>
+              <a href="/movie?page=1&sort_by=popularit.dec">MOVIES</a>
             </li>
             <li className="mb-5">
-              <a href="/Actor">ACTORS</a>
+              <a href="/actor">ACTORS</a>
             </li>
             <li className="mb-5">
               <a href="/tv">TV SHOWS</a>
