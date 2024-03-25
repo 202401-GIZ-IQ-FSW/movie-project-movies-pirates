@@ -17,6 +17,7 @@ export default function NavBar() {
           {" "}
           {/* Adjusted size */}
           <Image
+            href="/"
             src={image}
             alt="Logo"
             width={100}
@@ -24,7 +25,7 @@ export default function NavBar() {
             layout="responsive"
           />
         </div>
-        <div className="flex space-x-6 text-sm relative md:text-lg  sm:text-lg   ">
+        <div className="flex space-x-6 text-sm relative md:text-lg  sm:text-lg  text-white  ">
           <a className="" href={"/"}>
             Home
           </a>

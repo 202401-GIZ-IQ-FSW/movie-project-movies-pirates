@@ -1,7 +1,5 @@
-// import Footer from "@/components/Footer/Footer"
 import Movies from "@/components/Movies/Movies"
 import Pagination from "@/components/Pagination/Pagination"
-// import Pagination from "@/components/Pagination/Pagination"
 const TOKEN = process.env.API_USER_TOKEN
 
 async function page(param) {
@@ -32,7 +30,6 @@ async function page(param) {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </main>
   )
 }
