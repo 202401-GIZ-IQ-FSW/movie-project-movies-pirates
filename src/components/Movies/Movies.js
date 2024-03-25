@@ -1,6 +1,9 @@
+"use client"
 import React from "react"
 import Card from "@/components/Card/Card"
 function Movies({ MoviesData }) {
+
+  console.log({MoviesData})
   return (
     <div className="flex  flex-wrap ">
       {MoviesData.results.map((movie) => {

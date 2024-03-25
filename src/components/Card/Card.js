@@ -1,12 +1,18 @@
+"use client"
 import Link from "next/link"
 import React from "react"
+ function card({ Image, title, id }) {
 
-function card({ Image, title, id }) {
+    
+
   return (
     <a
       className={`text-decoration-none ${Image == undefined ? "skeleton" : ""}`}
-      href={`/movies/${id}`}
+      href={`/movies/${id}` }  
     >
+
+
+      
       <div className="inline-block cursor-pointer relative p-2">
         <div className="w-[240px] h-[350px] relative">
           <img
