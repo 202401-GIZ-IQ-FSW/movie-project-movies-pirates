@@ -61,7 +61,7 @@ function page() {
      
 
       
-      <div className='container mx-auto grid grid-cols-5 gap-2  '>
+      <div className='container mx-auto grid sm:grid-cols-3 md:grid-cols-5 gap-2  '>
         {actors.map(actor => (
 
         <a href= {`/actor/${actor.id}`} >

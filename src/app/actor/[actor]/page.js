@@ -61,7 +61,7 @@ const Page = ({ params }) => {
 )} 
           
 
-          <div className='  container w-[85%] mx-auto grid  grid-cols-1fr sm:grid-cols-5 gap-10 p-10 text-white'>
+          <div className='  container w-[85%] mx-auto grid  sm:grid-cols-2 md:grid-cols-5 gap-10 p-10 text-white'>
  
                                 {movieCredits.map(movie => (
 
