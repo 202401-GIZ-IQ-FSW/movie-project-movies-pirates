@@ -51,7 +51,7 @@ export default function NavBar() {
             <a className="mx-4" href={"#"}>
               Tv Show
             </a>
-            <a className="mx-4" href={"/actors"}>
+            <a className="mx-4" href={"/actor"}>
               Actors
             </a>
           </div>
