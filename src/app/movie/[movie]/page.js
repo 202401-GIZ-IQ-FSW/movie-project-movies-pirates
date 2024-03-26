@@ -1,5 +1,8 @@
 "use client"
 import React, { useState, useEffect } from "react";
+import ActorCard from "@/components/ActorCard/ActorCard";
+import Card from "@/components/Card/Card";
+
 
 const Page = ({ params }) => {
   const [movieInfo, setMovieInfo] = useState(null);
@@ -7,7 +10,9 @@ const Page = ({ params }) => {
   const [relatedMovies, setRelatedMovies] = useState([]);
   const [trailerKey, setTrailerKey] = useState(null);
   const [productionCompanies, setProductionCompanies] = useState([]);
+  const [director, setDirector] = useState("");
   const [showVideo, setShowVideo] = useState(false);
+
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -27,9 +32,28 @@ const Page = ({ params }) => {
         const creditsData = await creditsResponse.json();
         setCredits(creditsData.cast.slice(0, 5)); // Limit to 5 actors
 
+       // Fetch movie details again to get director's information
+const fullMovieResponse = await fetch(
+  `https://api.themoviedb.org/3/movie/${params.movie}?append_to_response=credits&api_key=97b9fa008c0d44e6c42538bc72b8628f`
+);
+const fullMovieData = await fullMovieResponse.json();
+const director = fullMovieData?.credits?.crew?.find(
+  (member) => member.job === "Director"
+);
+if (director) {
+  setDirector(director.name); // Set the director's name
+}
+        // // Fetch related movies
+        // const relatedResponse = await fetch(
+        //   `https://api.themoviedb.org/3/movie/${newParam}/similar?language=en-US&api_key=97b9fa008c0d44e6c42538bc72b8628f`,
+        // )
+        // const relatedData = await relatedResponse.json()
+        // setRelatedMovies(relatedData.results.slice(0, 5)) // Limit to 5 related movies
+
+
         // Fetch related movies
         const relatedResponse = await fetch(
-          `https://api.themoviedb.org/3/movie/${params.movie}/similar?language=en-US&api_key=97b9fa008c0d44e6c42538bc72b8628f`
+          `https://api.themoviedb.org/3/movie/${params.movie}/similar?language=en-US&api_key=97b9fa008c0d44e6c42538bc72b8628f`,
         );
         const relatedData = await relatedResponse.json();
         setRelatedMovies(relatedData.results.slice(0, 5)); // Limit to 5 related movies
@@ -52,8 +76,8 @@ const Page = ({ params }) => {
     fetchMovieDetails();
   }, [params.movie]);
 
-  return (
-    <div className="bg-[#020D18] text-white">
+  return ( 
+    <div className="bg-[#020D18] text-white BG">
       {movieInfo && (
         <div>
           <div className="grid gap-4 grid-cols-2">
@@ -80,6 +104,7 @@ const Page = ({ params }) => {
                 {movieInfo.vote_average} ({movieInfo.vote_count} votes)
               </p>
               <p className="relative top-28 text-lg text-justify">{movieInfo.overview}</p>
+            
             </div>
           </div>
 
@@ -116,16 +141,26 @@ const Page = ({ params }) => {
 
           <h1 className="text-[#9344E3] font-abc text-[34px]">CAST</h1>
           <ul className="grid grid-cols-5 mb-7">
-            {credits.map((actor) => (
-              <li key={actor.id}>{actor.name}</li>
+          {credits.map((actor) => (
+              <a href= {`/actor/${actor.id}`} >
+      
+              <ActorCard  key={actor.id} name= {actor.name} imgSrc={actor.profile_path}/>  
+             </a>
             ))}
           </ul>
 
           <h1 className="text-[#9344E3] font-abc text-[34px]">RELATED <span className=" text-white">MOVIES</span></h1>
           <ul className="grid grid-cols-5">
-            {relatedMovies.map((relatedMovie) => (
-              <li key={relatedMovie.id}>{relatedMovie.title}</li>
+          {relatedMovies.map((relatedMovie) => (
+              <Card
+              key={relatedMovie.id}
+              id={relatedMovie.id}
+              movie={relatedMovie}
+              title={relatedMovie.original_title}
+              Image={relatedMovie.poster_path}
+            />
             ))}
+
           </ul>
 
         </div>

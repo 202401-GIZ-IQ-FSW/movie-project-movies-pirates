@@ -4,7 +4,7 @@ function ActorCard({ name, imgSrc }) {
   return (
     <>
       <div className="relative w-full   mx-4 mb-8 overflow-hidden   ActorCArd">
-        <img
+        <img 
           className="z-1"
           src={`https://image.tmdb.org/t/p/w500${imgSrc}`}
           alt={name}
