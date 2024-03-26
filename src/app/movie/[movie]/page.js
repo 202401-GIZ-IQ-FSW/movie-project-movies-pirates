@@ -139,7 +139,7 @@ if (director) {
 </ul>
 
 
-          <h1 className="text-[#9344E3] font-abc text-[34px]">CAST</h1>
+          <h1 className="text-[#9344E3] font-abc text-[34px] relative left-4">CAST</h1>
           <ul className="grid grid-cols-5 mb-7">
           {credits.map((actor) => (
               <a href= {`/actor/${actor.id}`} >
@@ -149,7 +149,7 @@ if (director) {
             ))}
           </ul>
 
-          <h1 className="text-[#9344E3] font-abc text-[34px]">RELATED <span className=" text-white">MOVIES</span></h1>
+          <h1 className="text-[#9344E3] font-abc text-[34px] relative left-4">RELATED <span className=" text-white">MOVIES</span></h1>
           <ul className="grid grid-cols-5">
           {relatedMovies.map((relatedMovie) => (
               <Card

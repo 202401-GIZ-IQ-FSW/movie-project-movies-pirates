@@ -1,5 +1,5 @@
 import React from "react"
-import sample from "../../../style/sample.css"
+import "../../../style/sample.css"
 function ActorCard({ name, imgSrc }) {
   return (
     <>
