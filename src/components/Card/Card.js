@@ -5,7 +5,7 @@ function card({ Image, title, id }) {
   return (
     <a
       className={`text-decoration-none ${Image == undefined ? "skeleton" : ""}`}
-      href={`/movies/${id}`}
+      href={`/movie/${id}`}
     >
       <div className="inline-block cursor-pointer relative p-2">
         <div className="w-[240px] h-[350px] relative">
