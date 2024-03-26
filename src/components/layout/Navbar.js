@@ -1,5 +1,5 @@
 import Image from "next/image"
-import image from "@/home/i.png"
+import image from "../../../public/i.png"
 
 // This page, a child of a Server-Side Rendering (SSR) component,
 // cannot use hooks like useState due to SSR limitations.
