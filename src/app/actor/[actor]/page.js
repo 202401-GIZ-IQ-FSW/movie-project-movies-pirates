@@ -60,7 +60,7 @@ const Page = ({ params }) => {
         </div>
       )}
 
-      <div className="  container w-[85%] mx-auto grid  sm:grid-cols-2 md:grid-cols-5 gap-10 p-10 text-white">
+      <div className="  container w-[85%] mx-auto flex flex-wrap p-10 text-white">
         {movieCredits.map((movie) => (
           <Card
             key={movie.id}

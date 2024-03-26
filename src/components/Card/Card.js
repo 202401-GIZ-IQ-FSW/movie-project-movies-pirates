@@ -4,7 +4,7 @@ import React from "react"
 function card({ Image, title, id }) {
   return (
     <a
-      className={`text-decoration-none ${Image == undefined ? "skeleton" : ""}`}
+      className={`text-decoration-none m-2 ${Image == undefined ? "skeleton" : ""}`}
       href={`/movie/${id}`}
     >
       <div className="inline-block cursor-pointer relative p-2">
