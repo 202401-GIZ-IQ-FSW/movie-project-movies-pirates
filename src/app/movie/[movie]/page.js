@@ -75,7 +75,7 @@ const Page = ({ params }) => {
 
   return (
     <div className="bg-[#020D18] text-white BG">
-      {movieInfo && (
+      {movieInfo ? (
         <div>
           <div className="grid gap-4 grid-cols-2">
             <div>
@@ -178,6 +178,10 @@ const Page = ({ params }) => {
               />
             ))}
           </ul>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center w-full h-screen">
+          <span className="loading loading-spinner loading-lg"></span>
         </div>
       )}
     </div>

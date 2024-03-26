@@ -17,7 +17,7 @@ const Footer = () => {
               <a href="/">HOME</a>
             </li>
             <li className="mb-5">
-              <a href="/movie?page=1&sort_by=popularit.dec">MOVIES</a>
+              <a href="/movie?page=1&sort_by=popularity.dec">MOVIES</a>
             </li>
             <li className="mb-5">
               <a href="/actor">ACTORS</a>

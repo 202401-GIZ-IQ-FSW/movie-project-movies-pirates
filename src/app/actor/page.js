@@ -46,7 +46,10 @@ const Page = () => {
           ACTORS
         </h1>
 
-        <img src="ActorBg.jpg" className="absolute -z-1" />
+        <img
+          src="ActorBg.jpg"
+          className="absolute -z-1 object-cover  top-32 left-0 w-lvw  min-h-96"
+        />
         <div className="w-[80%]  mx-auto ">
           <h1 className="text-center font-bold text-xl">
             <span className="text-[#9344E3]"> Lovely </span>

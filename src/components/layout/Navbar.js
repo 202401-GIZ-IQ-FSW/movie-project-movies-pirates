@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image"
-import Link from "next/link"
+import { useRouter } from "next/navigation"
 import image from "../../../public/i.png"
+import { FaSearch } from "react-icons/fa"
 
 // This page, a child of a Server-Side Rendering (SSR) component,
 // cannot use hooks like useState due to SSR limitations.
@@ -8,9 +10,17 @@ import image from "../../../public/i.png"
 
 export default function NavBar() {
   //you can use this color as well 9344E3
+  const router = useRouter()
 
+  const search = (e) => {
+    e.preventDefault()
+    // navigate to move pages
+    console.log("search", e.target[0].value)
+    router.push(`/movie?page=1&query=${e.target[0].value}`)
+    // console.log("search", e.target[0].value)
+  }
   return (
-    <nav className="bg-slate-800 py-4 px-6 flex justify-between items-center font-extralight">
+    <nav className="bg-transparent py-4 px-6 flex justify-between items-center font-extralight ">
       <div className="flex items-center space-x-6">
         {/* Increased the size of the div wrapping the image and adjusted spacing */}
         <div className="rounded-full overflow-hidden h-24 w-24">
@@ -49,23 +59,29 @@ export default function NavBar() {
                 </a>
               </li>
             </ul>
-            <a className="mx-4" href={"#"}>
-              Tv Show
-            </a>
-            <a className="mx-4" href={"/actor"}>
-              Actors
-            </a>
           </div>
+          <a className="mx-4" href={"/tv"}>
+            Tv Show
+          </a>
+          <a className="mx-4" href={"/actor"}>
+            Actors
+          </a>
         </div>
       </div>
 
       <div className="flex items-center space-x-2">
-        <input
-          type="text"
-          placeholder="Search..."
-          aria-label="Search"
-          className="px-4 py-2 outline-none leading-9 text-xl rounded-md text-[#9344E3] font-jost"
-        />
+        <form onSubmit={search}>
+          <input
+            type="text"
+            name="search"
+            placeholder="Search..."
+            aria-label="Search"
+            className="px-4 py-1 outline-none leading-9 text-lg  italic rounded-md text-[#9344E3] font-jost"
+          />
+          <button type="submit" className="">
+            <FaSearch className="bg-transparent  relative right-8" />
+          </button>
+        </form>
       </div>
     </nav>
   )
