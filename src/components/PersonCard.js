@@ -1,7 +1,5 @@
-import React from "react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 import "tailwindcss/tailwind.css"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
-import Head from "next/head"
 
 const PersonCard = ({ name, imageUrl, linkedinUrl, githubUrl }) => {
   return (
