@@ -26,3 +26,19 @@
   .BG{
     background-color: #020D18;
   }
+
+  .BGIMG{
+    border:solid red;
+    background-size: cover; /* Ensure the background image fits within the container */
+    
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; 
+    opacity: 0.4;
+  
+  }
+  .blury{
+    filter: blur(15px); 
+    opacity: 0.2;
+    
+  
+  }

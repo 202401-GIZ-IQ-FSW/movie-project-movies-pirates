@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react"
-
+import sample from '../../../../style/sample.css';
 const Page = ({ params }) => {
   const newParam=params.movie
   console.log(newParam)
@@ -54,17 +54,39 @@ const Page = ({ params }) => {
   }, [params.Movie])
 
   return (
-    <div>
+    <main className="BG">
+ {movieInfo && (
+  <>
+      <div className="BGIMG blury absolute h-screen w-full bg-no-repeat " style={{backgroundImage: `url(https://image.tmdb.org/t/p/w500/${movieInfo.poster_path})`}}>
+ 
+    </div>
+         <div className=' container w-[85%] mx-auto grid grid-cols-1fr sm:grid-cols-2 gap-4 p-10 text-white'>
+
+<div><img src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`} alt=''/></div>
+<div>
+<h1 className='text-5xl text-purple-700 font-bold font-abc'>{movieInfo.title}</h1>
+<p> {movieInfo.runtime} minutes</p>
+<p>{movieInfo.release_date}</p>
+<p>{movieInfo.original_language}</p>
+<hr/>
+<p>{movieInfo.vote_average} ({movieInfo.vote_count} votes)</p>
+<p>{movieInfo.overview}</p>
+<p><strong>Director: </strong> here</p>
+<h2 className='bg-purple-700 p-5 text-xl w-1/3 text-center  font-abc font-bold' > Watch Trailer</h2>
+</div>
+</div>
+     </> )}
+    
       {movieInfo && (
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`}
             alt="Movie Poster"
           />
-          <h1>{movieInfo.title}</h1>
-          <p>Release Date: {movieInfo.release_date}</p>
-          <p>Runtime: {movieInfo.runtime} minutes</p>
-          <p>Language: {movieInfo.original_language}</p>
+          <h1  className='my-5 bg-red-100'>{movieInfo.title}</h1>
+          <p className='my-3'>Release Date: {movieInfo.release_date}</p>
+          <p  className='my-5'>Runtime: {movieInfo.runtime} minutes</p>
+          <p  className='p-5'>Language: {movieInfo.original_language}</p>
           <p>
             Rating: {movieInfo.vote_average} ({movieInfo.vote_count} votes)
           </p>
@@ -108,7 +130,7 @@ const Page = ({ params }) => {
           </ul>
         </div>
       )}
-    </div>
+    </main>
   )
 }
 
