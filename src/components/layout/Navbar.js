@@ -9,8 +9,8 @@ export default function NavBar() {
   //you can use this color as well 9344E3
 
   return (
-    <nav className="bg-slate-800 py-4 px-6 flex justify-between items-center font-extralight">
-      <div className="flex items-center space-x-6">
+    <nav className="bg-slate-800 py-4 px-6 flex justify-between items-center font-extralight z-50 bg-transparent ">
+      <div className="flex items-center space-x-6 ">
         {/* Increased the size of the div wrapping the image and adjusted spacing */}
         <div className="rounded-full overflow-hidden h-24 w-24">
           {" "}
@@ -29,21 +29,19 @@ export default function NavBar() {
             Home
           </a>
           <div className="dropdown dropdown-hover ">
-            <a href={"/movie?page=1&sort_by=popularity.desc"}>Movie</a>
+            <a href={"/Movie?name=Top+Rate&category=top_rated"}>Movie</a>
             <ul
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 w-52 bg-slate-800"
             >
               <li>
-                <a href={"/movie?page=1&sort_by=vote_avarage.desc"}>
-                  Top rated
-                </a>
+                <a href={"/Movie?page=1&sort_by=vote_avarage.dec"}>Top rated</a>
               </li>
               <li>
-                <a href={"/movie?page=4&sort_by=revenue.desc"}>Top Office</a>
+                <a href={"/Movie?page=4&sort_by=revenue.desc"}>Top Office</a>
               </li>
               <li>
-                <a href={"/movie?page=1&sort_by=primary_release_date.desc"}>
+                <a href={"/Movie?page=1&sort_by=primary_release_date.desc"}>
                   Up Comming{" "}
                 </a>
               </li>
@@ -51,14 +49,14 @@ export default function NavBar() {
             <a className="mx-4" href={"#"}>
               Tv Show
             </a>
-            <a className="mx-4" href={"/actor"}>
+            <a className="mx-4" href={"/Actors"}>
               Actors
             </a>
           </div>
         </div>
       </div>
 
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 ">
         <input
           type="text"
           placeholder="Search..."

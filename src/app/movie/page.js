@@ -13,7 +13,7 @@ async function page(param) {
   })
 
   return (
-    <main className="p-0 m-0  min-h-screen   bg-black" suppressHydrationWarning>
+    <main className="p-0 m-0 BG  min-h-screen   bg-black" suppressHydrationWarning>
       <div className="w-[80%]  mx-auto ">
         <h1 className="text-center font-bold text-xl">
           <span className="text-[#9344E3]">{sort.toUpperCase()} </span>
