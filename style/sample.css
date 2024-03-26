@@ -1,0 +1,46 @@
+.imgOverlay{
+    background: rgba(0, 0, 0, 0.4);
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.ActorCArd:hover .imgOverlay{
+    background: rgba(0, 0, 0, 0 );
+}
+.ActorCArd:hover img{
+  scale: 1.2;
+  transition: 0.3s ease-in-out;
+}
+
+.ActorCArd img{
+    
+    transition: 0.3s ease-in-out;
+   width: 240px;
+   height: 350px;
+  }
+
+  .bgColorCard{
+    background-color: #0F171E;
+  }
+  .BG{
+    background-color: #020D18;
+  }
+
+  .BGIMG{
+    border:solid red;
+    background-size: cover; /* Ensure the background image fits within the container */
+    
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; 
+    opacity: 0.4;
+  
+  }
+  .blury{
+    filter: blur(15px); 
+    opacity: 0.2;
+    
+  
+  }
